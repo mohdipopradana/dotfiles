@@ -1,0 +1,21 @@
+#!/bin/bash
+
+
+case $BLOCK_BUTTON in
+    1) pamixer --toggle-mute ;;
+esac
+
+
+speak_status=$(pamixer --get-mute)
+speak_volume=$(pamixer --get-volume-human | tr -d \%)
+
+
+if [[ "${speak_status}" = "true" ]] || [[ "${speak_volume}" = 0 ]]; then
+    echo "󰖁"
+elif [[ "${speak_volume}" -gt 0 ]] && [[ "${speak_volume}" -le 33 ]]; then
+    echo " ${speak_volume}%"
+elif [[ "${speak_volume}" -gt 33 ]] && [[ "${speak_volume}" -le 66 ]]; then
+    echo "󰕾 ${speak_volume}%" 
+elif [[ "${speak_volume}" -gt 66 ]] && [[ "${speak_volume}" -le 100 ]]; then
+    echo " ${speak_volume}%"
+fi

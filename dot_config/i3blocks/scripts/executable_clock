@@ -1,0 +1,7 @@
+#!/bin/bash
+
+
+clock=$(date '+%H:%M:%S')
+# clock=$(date '%H:%M')
+
+echo " ${clock}"

@@ -1,0 +1,10 @@
+#!/bin/bash
+
+check_conn=$(nmcli d | grep -w "wifi" | awk '{print $3}')
+conn_name=$(nmcli -t -f name c s -a | awk 'NR==1')
+
+if [ "${check_conn}" = "connected" ]; then
+    echo "  ${conn_name}"
+else
+    echo " "
+fi

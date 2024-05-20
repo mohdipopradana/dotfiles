@@ -1,0 +1,284 @@
+{
+  // WORKBENCH AND WINDOW SETTINGS
+  "workbench.startupEditor": "none",
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.fontSize": 16.5,
+  "window.menuBarVisibility": "toggle",
+
+  // EDITOR SETTINGS
+  "editor.fontFamily": "FiraCode Nerd Font",
+  "editor.lineNumbers": "relative",
+  "editor.cursorStyle": "block",
+  "editor.cursorWidth": 10,
+  "editor.minimap.enabled": false,
+  "editor.occurrencesHighlight": "off",
+  "editor.selectionHighlight": false,
+  "editor.fontLigatures": true,
+  "editor.inlayHints.fontFamily": "FiraCode Nerd Font",
+  "editor.renderLineHighlight": "none",
+  "editor.formatOnSave": true,
+  "editor.matchBrackets": "never",
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+  "editor.guides.highlightActiveBracketPair": false,
+  "editor.guides.bracketPairsHorizontal": false,
+  "editor.guides.bracketPairs": "active",
+  "diffEditor.maxComputationTime": 0,
+
+  "workbench.colorCustomizations": {
+    // Gruvbox colorscheme
+    // Color of editor background
+    "editor.background": "#1d2021",
+    // Color of line number
+    "editorLineNumber.foreground": "#5f8787",
+    // Color of active line number
+    "editorLineNumber.activeForeground": "#fffea0",
+    // Color of fat cursor
+    "editorCursor.foreground": "#dfe3f7",
+    // Color of character behind the fat cursor
+    "editorCursor.background": "#000000",
+    // Background color while select text in visual mode
+    "editor.selectionBackground": "#444144",
+    "editorSuggestWidget.background": "#1d2021",
+    "editorSuggestWidget.selectedBackground": "#83a598",
+    "editorSuggestWidget.selectedForeground": "#000000",
+    "editorSuggestWidget.foreground": "#ffffff",
+    "editorSuggestWidget.highlightForeground": "#ffffff",
+    "editorSuggestWidget.focusHighlightForeground": "#000000",
+    "editorSuggestWidget.border": "#458588",
+    // Background color of input box while open input list
+    // "input.background": "#191919",
+    // Color of list option while open input list
+    // "quickInput.background": "#0f0f0f",
+    "list.activeSelectionBackground": "#3c3836",
+    "list.activeSelectionForeground": "#ffffff",
+    // Background color of selected list in open input list
+    // "list.activeSelectionBackground": "#778aed",
+    // Foreground color of selected list in open input list
+    // "list.activeSelectionForeground": "#ffffff",
+    // Foreground color of activity bar in left side of editor
+    "activityBar.background": "#1d2021",
+    "activityBar.activeBorder": "#ffffff",
+    "activityBar.inactiveForeground": "#80B3B2",
+    // "activityBar.inactiveForeground": "#659bba",
+    "activityBar.foreground": "#ffffff",
+    // Border color of active tab
+    // "tab.activeBorder": "#fabd2f",
+    "tab.activeBackground": "#4d4747",
+    // "tab.activeBorderTop": "#ffffff",
+    "tab.activeBorder": "#ffffff",
+    // Background color of badge of activity bar in left side of editor
+    "activityBarBadge.background": "#E7D7AD",
+    // Foreground color of badge of activity bar in left side of editor
+    "activityBarBadge.foreground": "#000000",
+    // Background color of status bar in bottom side of editor
+    "statusBar.background": "#32302f",
+    // Foreground color of status bar in bottom side of editor
+    "statusBar.foreground": "#ffffff",
+    // Background color of remote shell such as wsl or ssh in bottom side of editor
+    "statusBarItem.remoteBackground": "#32302f",
+    // Foreground color of remote shell such as wsl or ssh in bottom side of editor
+    "statusBarItem.remoteForeground": "#ffffff"
+
+    // Blue or colorfull colorscheme
+    // "editor.background": "#21202f",
+    // Background color of input box while open input list
+    // "input.background": "#191919",
+    // Color of list option while open input list
+    // "quickInput.background": "#0f0f0f",
+    // Background color of selected list in open input list
+    // "list.activeSelectionBackground": "#2a6485",
+    // Foreground color of selected list in open input list
+    // "list.activeSelectionForeground": "#ffffff",
+    // Foreground color of activity bar in left side of editor
+    // "activityBar.background": "#1d2021",
+    // "activityBar.activeBorder": "#ffffff",
+    // "activityBar.inactiveForeground": "#80B3B2",
+    // "activityBar.inactiveForeground": "#659bba",
+    // "activityBar.foreground": "#ffffff",
+    // Border color of active tab
+    // "tab.activeBorder": "#fabd2f",
+    // "tab.activeBackground": "#5b485c",
+    // "tab.activeBorderTop": "#ffffff",
+    // Background color of badge of activity bar in left side of editor
+    // "activityBarBadge.background": "#ffffff",
+    // Foreground color of badge of activity bar in left side of editor
+    // "activityBarBadge.foreground": "#000000",
+    // Background color of status bar in bottom side of editor
+    // "statusBar.background": "#393f5a",
+    // Foreground color of status bar in bottom side of editor
+    // "statusBar.foreground": "#ffffff",
+    // Background color of remote shell such as wsl or ssh in bottom side of editor
+    // "statusBarItem.remoteBackground": "#393f5a",
+    // Foreground color of remote shell such as wsl or ssh in bottom side of editor
+    // "statusBarItem.remoteForeground": "#ffffff"
+  },
+
+  // TERMINAL SETTINGS
+  "terminal.integrated.fontFamily": "FiraCode Nerd Font",
+  "terminal.integrated.fontSize": 13,
+  "terminal.integrated.lineHeight": 1,
+  "terminal.integrated.inheritEnv": false,
+
+  // LSP, FORMATTER, AND LINTER
+  // PYTHON SETTINGS
+  "python.analysis.diagnosticSeverityOverrides": {
+    "reportMissingModuleSource": "none"
+  },
+  "[python]": {
+    "editor.formatOnSave": true,
+    // "editor.defaultFormatter": "ms-python.black-formatter",
+    "ruff.enable": false,
+    "ruff.fixAll": false,
+    "python.languageServer": "Pylance"
+  },
+
+  // JUPYTER NOTEBOOK SETTINGS
+  "notebook.output.fontFamily": "FiraCode Nerd Font",
+  "notebook.output.fontSize": 14,
+
+  //JSON SETTINGS
+  "[jsonc]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  // OTHERS
+  "update.showReleaseNotes": false,
+  "breadcrumbs.enabled": false,
+  "git.openRepositoryInParentFolders": "always",
+  "go.toolsManagement.checkForUpdates": "off",
+  "http.proxySupport": "on",
+  "redhat.telemetry.enabled": false,
+
+  // VIM SETTINGS INITIALIZE
+  "vim.leader": "<Space>",
+  "vim.useSystemClipboard": true,
+  "vim.hlsearch": true,
+
+  // VIM MOTION IN NORMAL MODE
+  "vim.normalModeKeyBindingsNonRecursive": [
+    // switch between tab that was opened
+    {
+      "before": ["<S-h>"],
+      "commands": [":bprevious"]
+    },
+    {
+      "before": ["<S-l>"],
+      "commands": [":bnext"]
+    },
+    // Splits editor vertically and horizontally
+    {
+      "before": ["v", "s"],
+      "commands": [":vsplit"]
+    },
+    {
+      "before": ["h", "s"],
+      "commands": [":split"]
+    },
+    // Switch between editor that was splitted
+    {
+      "before": ["leader", "leader"],
+      "commands": ["workbench.action.focusPreviousGroup"]
+    },
+    {
+      "before": ["leader", "leader"],
+      "commands": ["workbench.action.focusNextGroup"]
+    },
+    // Keymap to save a working file
+    {
+      "before": ["<C-s>"],
+      "commands": [":w"]
+    },
+    // Keymap to save and quit a working file
+    {
+      "before": ["<C-x>"],
+      "commands": [":x"]
+    },
+    // Keymap to quit working file
+    {
+      "before": ["<C-q>"],
+      "commands": [":q"]
+    },
+    // Keymap for diagnostic error
+    {
+      "before": ["[", "d"],
+      "commands": ["editor.action.marker.prev"]
+    },
+
+    {
+      "before": ["]", "d"],
+      "commands": ["editor.action.marker.next"]
+    },
+    {
+      "before": ["<leader>", "c", "a"],
+      "commands": ["editor.action.quickFix"]
+    },
+    // Keymap for telescopic wannabe
+    // Opening recent file
+    {
+      "before": ["<S-t>"],
+      "commands": ["workbench.action.quickOpen"]
+    },
+    {
+      "before": ["c", "l"],
+      "commands": ["editor.action.commentLine"]
+    },
+    {
+      "before": ["<S-d>"],
+      "commands": ["workbench.action.showCommands"]
+    }
+  ],
+
+  // VIM MOTION IN VISUAL MODE
+  "vim.visualModeKeyBindings": [
+    // Keymap to save a working file
+    {
+      "before": ["<C-s>"],
+      "commands": [":w"]
+    },
+    // Keymap to save and quit a working file
+    {
+      "before": ["<C-x>"],
+      "commands": [":x"]
+    },
+    // Keymap to quit working file
+    {
+      "before": ["<C-q>"],
+      "commands": [":q"]
+    },
+    // Indenting line in visual mode
+    {
+      "before": ["<"],
+      "commands": ["editor.action.outdentLines"]
+    },
+    {
+      "before": [">"],
+      "commands": ["editor.action.indentLines"]
+    },
+    // Keymap to move line constantly in visual mode
+    {
+      "before": ["J"],
+      "commands": ["editor.action.moveLinesDownAction"]
+    },
+    {
+      "before": ["K"],
+      "commands": ["editor.action.moveLinesUpAction"]
+    },
+    // Commenting line
+    {
+      "before": ["c", "l"],
+      "commands": ["editor.action.commentLine"]
+    }
+  ],
+  "security.allowedUNCHosts": ["wsl.localhost"],
+  "security.workspace.trust.untrustedFiles": "open",
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "eslint.format.enable": true,
+  "files.watcherExclude": {
+    "**/.bloop": true,
+    "**/.metals": true,
+    "**/.ammonite": true
+  },
+  "workbench.colorTheme": "Gruvbox Dark Hard",
+  "workbench.sideBar.location": "right"
+}

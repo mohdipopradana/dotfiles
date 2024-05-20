@@ -1,0 +1,10 @@
+#!/bin/bash
+
+#󰈷
+check_usb=$(lsblk -l -o 'TRAN' | grep -c "usb")
+
+if [[ "${check_usb}" != 0 ]]; then
+    echo " "
+else
+    echo ""
+fi

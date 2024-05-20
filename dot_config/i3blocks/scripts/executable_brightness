@@ -1,0 +1,10 @@
+#!/bin/bash
+
+brightness=$(xbacklight -get | cut -f1 -d'.')
+if [ "${brightness}" -gt 0 ] && [ "${brightness}" -le 33 ]; then
+    echo "󰃞 ${brightness}%"
+elif [ "${brightness}" -gt 34 ] && [ "${brightness}" -le 67 ]; then
+    echo "󰃟 ${brightness}%"
+elif [ "${brightness}" -gt 68 ] && [ "${brightness}" -le 100 ]; then
+    echo "󰃠 ${brightness}%" 
+fi

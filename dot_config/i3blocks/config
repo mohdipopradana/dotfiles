@@ -1,0 +1,79 @@
+# i3blocks config file
+#
+# Please see man i3blocks for a complete reference!
+# The man page is also hosted at http://vivien.github.io/i3blocks
+#
+# List of valid properties:
+#
+# align
+# color
+# command
+# full_text
+# instance
+# interval
+# label
+# min_width
+# name
+# separator
+# separator_block_width
+# short_text
+# signal
+# urgent
+
+# Global properties
+#
+# The top properties below are applied to every block, but can be overridden.
+# Each block command defaults to the script name to avoid boilerplate.
+command=~/.config/i3blocks/scripts/$BLOCK_NAME
+separator_block_width=15
+markup=pango
+align=center
+
+
+[cpu]
+interval=2
+
+[ram]
+interval=5
+color=#ffffff
+
+[disk]
+interval=300
+color=#ffffff
+
+[brightness]
+interval=1
+color=#ffffff
+
+[audio]
+interval=1
+color=#ffffff
+
+[jackaudio]
+interval=1
+color=#ffffff
+
+[bluetooth]
+interval=1
+color=#ffffff
+
+[usb]
+interval=1
+color=#ffffff
+
+[touchpad]
+interval=1
+color=#ffffff
+
+[wifi]
+interval=1
+color=#ffffff
+
+[battery]
+interval=10
+
+[calendar]
+interval=3600
+
+[clock]
+interval=10

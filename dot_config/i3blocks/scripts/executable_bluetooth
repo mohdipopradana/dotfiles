@@ -1,0 +1,9 @@
+#!/bin/bash
+
+bluetooth=$(bluetoothctl show | grep "Powered: yes" | wc -c)
+
+if [ "$bluetooth" != "0" ]; then
+	echo "  "
+else
+	echo ""
+fi

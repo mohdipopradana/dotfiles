@@ -1,0 +1,140 @@
+# GENERAL SETTINGS
+# Set alt key as mod/super
+set $mod Mod1
+
+# Config to adjust volume audio using pactl
+include ~/.config/i3/audio.conf
+
+# Config to adjust brightness
+include ~/.config/i3/backlight.conf
+
+# Config to adjust touchpad
+include ~/.config/i3/touchpad.conf
+
+# DISPLAY SETTINGS
+# Config to set type and size of font
+font pango:FiraCode Nerd Font Medium 10
+
+# Set theme for i3
+include ~/.config/i3/colorschemes/gruvbox.conf
+
+# AUTO START APPLICATION
+# Set i3 to autostart while type "startx"
+exec --no-startup-id dex --autostart --environment i3
+
+# Set network manager to autostart while startup
+exec --no-startup-id nm-applet
+
+# Set resolution of display monitor
+exec_always xrandr --output eDP1 --mode 1920x1080
+exec_always --no-startup-id setxkbmap us
+
+# Set polybar to autostart while startup
+# exec_always --no-startup-id ~/.config/polybar/launch.sh
+
+# Set picom to autostart while startup
+# exec_always --no-startup-id picom -b
+
+# Set wallpaper of desktop
+# exec_always --no-startup-id feh --bg-scale --zoom fill ~/Pictures/Wallpaper/Laptop/blueish/Door\ Under\ The\ Sun.jpg
+exec_always --no-startup-id feh --bg-scale --zoom fill /mnt/win11d/Others/Wallpaper/Laptop/Philip\ Catrier\ Arena\ v2.jpg
+
+# Set betterlockscreen
+# exec --no-startup-id betterlockscreen -w dim
+# exec --no-startup-id source ~/.fehbg
+
+# Set dunst to autostart while startup
+# exec_always --no-startup-id dunst -config ~/.config/dunst/dunstrc
+
+# Set bluetooth to always off while startup
+exec_always --no-startup-id bluetoothctl power off
+
+# Auto mount OneDrive while startup
+exec_always --no-startup-id onedrive
+
+# WINDOWS AND WORKSPACE MODE SETTING
+# Config to setting movement and workflow between every windows
+include ~/.config/i3/windows_mode.conf
+
+# Config to setting movement and workflow between every workspaces
+include ~/.config/i3/workspaces.conf
+
+# KEYMAP SETTINGS
+# Config to setting keymaps for open applications
+include ~/.config/i3/keymaps.conf
+
+# exit i3 (logs you out of your X session)
+bindsym mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+
+# resize window (you can also use the mouse for that)
+mode "resize" {
+        # These bindings trigger as soon as you enter the resize mode
+
+        # Pressing left will shrink the window’s width.
+        # Pressing right will grow the window’s width.
+        # Pressing up will shrink the window’s height.
+        # Pressing down will grow the window’s height.
+        bindsym $left       resize shrink width 10 px or 10 ppt
+        bindsym $down       resize grow height 10 px or 10 ppt
+        bindsym $up         resize shrink height 10 px or 10 ppt
+        bindsym $right      resize grow width 10 px or 10 ppt
+
+        # same bindings, but for the arrow keys
+        bindsym Left        resize shrink width 10 px or 10 ppt
+        bindsym Down        resize grow height 10 px or 10 ppt
+        bindsym Up          resize shrink height 10 px or 10 ppt
+        bindsym Right       resize grow width 10 px or 10 ppt
+
+        # back to normal: Enter or Escape or Mod1+r
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym Mod1+r mode "default"
+}
+
+bindsym mod+r mode "resize"
+
+# Start i3bar to display a workspace bar (plus the system information i3status
+# finds out, if available)
+
+# Gruvbox colorscheme
+bar {
+    status_command i3blocks
+    padding 0px 15px 0px 0px
+    separator_symbol "|"
+    font pango: FiraCode Nerd Font Medium 10
+
+        colors {
+            background #000000
+                statusline #FFFFFF
+                separator  #fcdbc0
+
+                                   #border #background   #text
+                focused_workspace  #83a598 #83a598       #000000
+                active_workspace   #0e0e0f #0e0e0f       #FFFFFF
+                inactive_workspace #0e0e0f #0e0e0f       #FFFFFF
+                urgent_workspace   #fb4834 #fb4834       #FFFFFF
+                binding_mode       #2F343A #fb4834       #FFFFFF
+        }
+}
+
+# Aura colorscheme
+# bar {
+#     status_command i3blocks
+#     padding 0px 15px 0px 0px
+#     separator_symbol "|"
+#     font pango: FiraCode Nerd Font Medium 10
+#
+#         colors {
+#             background #000000
+#                 statusline #FFFFFF
+#                 separator  #565f89
+#
+#                                    #border #background   #text
+#                 focused_workspace  #778aed #778aed       #000000
+#                 active_workspace   #0e0e0f #0e0e0f       #FFFFFF
+#                 inactive_workspace #0e0e0f #0e0e0f       #FFFFFF
+#                 urgent_workspace   #fb4834 #fb4834       #FFFFFF
+#                 binding_mode       #2F343A #fb4834       #FFFFFF
+#         }
+# }
+exec i3-confir-wizard

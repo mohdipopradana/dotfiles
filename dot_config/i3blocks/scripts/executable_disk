@@ -1,0 +1,7 @@
+disk_usage=$(df -h --output=used,size / | awk 'NR==2 {print $1 "/" $2}')
+
+# disk_icon=" " 
+# disk_icon=" "
+disk_icon=" "
+
+echo "${disk_icon}${disk_usage}" 

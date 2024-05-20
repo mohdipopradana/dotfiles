@@ -1,0 +1,42 @@
+<b>LAUNCHER ---------------------------------------------</b>
+<b>KEYMAPS             COMMAND</b>
+alt+enter           Terminal
+alt+d               Rofi: App launcher
+alt+x               Power menu
+alt+z               Shortcut info
+alt+shift+r         Restart config
+alt+shift+c         Reload config
+alt+shift+e         Exit i3
+alt+q               Close window focus
+printsc             Screenshot
+
+<b>WINDOWS MODE -----------------------------------------</b>
+<b>KEYMAPS             COMMAND</b>
+alt+left            Move focus to left window
+alt+h               Move focus to left window
+alt+down            Move focus to below window
+alt+j               Move focus to below window
+alt+up              Move focus to above window
+alt+k               Move focus to above window
+alt+right           Move focus to right window
+alt+l               Move focus to right window
+alt+shift+left      Swap window to left side
+alt+shift+h         Swap window to left side
+alt+shift+down      Swap window to down side
+alt+shift+j         Swap window to down side
+alt+shift+up        Swap window to up side
+alt+shift+k         Swap window to up side
+alt+shift+right     Swap window to right side
+alt+shift+l         Swap window to right side
+alt+e               Change window layout to hor/ver
+alt+s               Change window layout to stacking
+alt+w               Charge window layout to tabbed
+alt+f               Full screen
+
+<b>WORKSPACE MODE ---------------------------------------</b>
+<b>KEYMAPS             COMMAND</b>
+alt+1               Move to workspace 1
+alt+2               Move to workspace 2
+alt+3               Move to workspace 3
+alt+4               Move to workspace 4
+alt+5               Move to workspace 5...

@@ -1,0 +1,23 @@
+<b>HARPOON ----------------------------------------------</b>
+<b>MODE    KEYMAPS     COMMAND</b>
+(N)     space+hw    Open harpoon window
+(N)     space+ha    Add file to harpoon
+(N)     shift+u     Jump to file 1
+(N)     shift+i     Jump to file 2
+(N)     shift+o     Jump to file 3
+(N)     shift+p     Jump to file 4
+
+<b>TELESCOPE --------------------------------------------</b>
+<b>MODE    KEYMAPS     COMMAND</b>
+(N)     space+ff    Browse files
+(N)     space+fr    Open recent files
+(N)     space+fs    Find string in CWD
+(N)     space+fc    Find string under cursor in CWD
+(N)     space+fh    Help tags
+(A)     ctrl+k      Select previous option
+(A)     ctrl+j      Select next option
+(A)     ctrl+c      Close
+
+<b>UNDOTREE ---------------------------------------------</b>
+<b>MODE    KEYMAPS     COMMAND</b>
+(N)     ctrl+z      Open undotree

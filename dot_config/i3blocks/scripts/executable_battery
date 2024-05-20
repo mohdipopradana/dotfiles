@@ -1,0 +1,32 @@
+#!/bin/bash
+
+
+bat_status=$(cat /sys/class/power_supply/BAT0/status)
+bat_capacity=$(cat /sys/class/power_supply/BAT0/capacity)
+
+urgent_value=3
+
+if [[ "${bat_status}" = "Charging" ]] && [[ "${bat_capacity}" -gt 87 ]]; then
+    echo "<span  color='#ffea20'>  ${bat_capacity}%</span>"
+elif [[ "${bat_status}" = "Charging" ]] && [[ "${bat_capacity}" -gt 63 ]]; then
+    echo "<span  color='#ffea20'>  ${bat_capacity}%</span>"
+elif [[ "${bat_status}" = "Charging" ]] && [[ "${bat_capacity}" -gt 38 ]]; then
+    echo "<span  color='#ffea20'>  ${bat_capacity}%</span>"
+elif [[ "${bat_status}" = "Charging" ]] && [[ "${bat_capacity}" -gt 13 ]]; then
+    echo "<span  color='#ffea20'>  ${bat_capacity}%</span>"
+elif [[ "${bat_status}" = "Charging" ]] && [[ "${bat_capacity}" -le 13 ]]; then
+    echo "<span  color='$#ffea20'>  ${bat_capacity}%</span>"
+elif [[ "${bat_status}" = "Discharging" ]] && [[ "${bat_capacity}" -gt 87 ]]; then
+    echo "<span color='#ffffff'>  ${bat_capacity}%</span>"
+elif [[ "${bat_status}" = "Discharging" ]] && [[ "${bat_capacity}" -gt 63 ]]; then
+    echo "<span color='#ffffff'>  ${bat_capacity}%</span>"
+elif [[ "${bat_status}" = "Discharging" ]] && [[ "${bat_capacity}" -gt 38 ]]; then
+    echo "<span color='#ffffff'>  ${bat_capacity}%</span>"
+elif [[ "${bat_status}" = "Discharging" ]] && [[ "${bat_capacity}" -gt 13 ]]; then
+    echo "<span color='#fe8019'>  ${bat_capacity}%</span>"
+elif [[ "${bat_status}" = "Discharging" ]] && [[ "${bat_capacity}" -le 13 ]]; then
+    echo "<span color='#cc241d'>  ${bat_capacity}%</span>"
+elif [[ "${bat_status}" = "Discharging" ]] && [[ "${bat_capacity}" -le "${urgent_value}" ]]; then
+    exit 33
+fi
+

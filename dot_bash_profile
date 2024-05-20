@@ -1,0 +1,17 @@
+#
+# ~/.bash_profile
+#
+
+# Set editor to neovim
+export EDITOR="/usr/bin/nvim"
+
+[[ -f ~/.bashrc ]] && . ~/.bashrc
+
+[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx
+
+bindkey -s ^f "tmux-sessionizer\n"
+. "$HOME/.cargo/env"
+
+# >>> coursier install directory >>>
+export PATH="$PATH:/home/mdpradana/.local/share/coursier/bin"
+# <<< coursier install directory <<<

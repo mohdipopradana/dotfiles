@@ -1,0 +1,88 @@
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  spacing: 0;
+
+  gruvbox-bg: #1d2021;
+  gruvbox-fg: #ffffff;
+  gruvbox-bd: #fcdbc0;
+  gruvbox-hl: #83a598;
+  gruvbox-text-sel: #000000;
+  gruvbox-text-un: #6A9C89;
+
+  background-color: @gruvbox-bg;
+  text-color: @gruvbox-fg;
+}
+
+window {
+  transparency: "real";
+  width: 400;
+  height: 290;
+  border: 2;
+  border-color: @gruvbox-bd;
+  padding: 2;
+}
+
+mainbox {
+  children: [inputbar, listview];
+  boder: 0;
+  padding: 0;
+}
+
+inputbar { 
+    spacing: 0;
+    background-color: @gruvbox-bg;
+    padding: 2px;
+    children: [ prompt, textbox-prompt-sep, entry, case-indicator];
+}
+
+textbox-prompt-sep {
+    expand:     false;
+    str:        ":";
+    text-color: @gruvbox-fg;
+    margin:     0 0.3em 0 0;
+}
+
+case-indicator,
+entry,
+button { 
+    spacing:    0;
+    padding: 0 2px 0 2px;
+    text-color: @gruvbox-fg;
+}
+
+prompt {
+    padding: 2px 2px 2px 8px;
+    text-color: @gruvbox-fg;
+
+}
+
+listview {
+    border:       2px 2px 0 0;
+    padding:      5px 3px 0px 3px;
+    border-color: @gruvbox-bd;
+    spacing:      2px;
+    columns: 1;
+    lines: 8;
+}
+
+element {
+  children: [element-text];
+  border: 0;
+  padding: 3px 3px 3px 3px;
+}
+
+element-text {
+    background-color: inherit;
+    text-color: @gruvbox-text-un;
+    padding: 2px 2px 2px 5px;
+    highlight: none;
+}
+
+element-text selected {
+  text-color: @gruvbox-text-sel;
+  background-color: @gruvbox-hl;
+}
+
+

@@ -1,0 +1,9 @@
+<b>PREFIX -----------------------------------------------</b>
+<b>KEYMAPS             COMMAND</b>
+`                   Prefix
+
+<b>SESSION ----------------------------------------------</b>
+<b>KEYMAPS             COMMAND</b>
+prefix+c            New session
+prefix+p            Move to next session
+prefix+o            Move to previous session

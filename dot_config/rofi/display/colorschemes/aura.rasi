@@ -1,0 +1,88 @@
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  spacing: 0;
+
+  aura-bg: #21202e;
+  aura-fg: #ffffff;
+  aura-bd-blue: #565f89;
+  aura-hl-blue: #778aed;
+  aura-text-sel-blue: #000000;
+  aura-text-un-blue: #6A9C89;
+
+  background-color: @aura-bg;
+  text-color: @aura-fg-blue;
+}
+
+window {
+  transparency: "real";
+  width: 400;
+  height: 290;
+  border: 2;
+  border-color: @aura-bd-blue;
+  padding: 2;
+}
+
+mainbox {
+  children: [inputbar, listview];
+  boder: 0;
+  padding: 0;
+}
+
+inputbar { 
+    spacing: 0;
+    background-color: @aura-bg;
+    padding: 2px;
+    children: [ prompt, textbox-prompt-sep, entry, case-indicator];
+}
+
+textbox-prompt-sep {
+    expand:     false;
+    str:        ":";
+    text-color: @aura-fg;
+    margin:     0 0.3em 0 0;
+}
+
+case-indicator,
+entry,
+button { 
+    spacing:    0;
+    padding: 0 2px 0 2px;
+    text-color: @aura-fg;
+}
+
+prompt {
+    padding: 2px 2px 2px 8px;
+    text-color: @aura-fg;
+
+}
+
+listview {
+    border:       2px 2px 0 0;
+    padding:      5px 3px 0px 3px;
+    border-color: @aura-bd-blue;
+    spacing:      2px;
+    columns: 1;
+    lines: 8;
+}
+
+element {
+  children: [element-text];
+  border: 0;
+  padding: 3px 3px 3px 3px;
+}
+
+element-text {
+    background-color: inherit;
+    text-color: @aura-text-un-blue;
+    padding: 2px 2px 2px 5px;
+    highlight: none;
+}
+
+element-text selected {
+  text-color: @aura-text-sel-blue;
+  background-color: @aura-hl-blue;
+}
+
+

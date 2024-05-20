@@ -1,0 +1,15 @@
+<b>COMMENT ---------------------------------------</b>
+<b>MODE    KEYMAPS     COMMAND</b>
+(N)     gcc         Comment line
+(N)     gc(motion)  Comment line with motion
+(V)     gc          Comment line selected
+
+<b>SURROUND ---------------------------------------</b>
+<b>MODE    KEYMAPS     COMMAND</b>
+(N)     ds{1}         Remove char {1}
+(N)     cs{1}{2}      Change char {1} to {2}
+(N)     cs{t1}{t2}    Change tag html {1} to {2}
+(N)     ysiw{1}       Add new char {1} to word
+(N)     yss{B}        Add new char {1} to sentence
+
+

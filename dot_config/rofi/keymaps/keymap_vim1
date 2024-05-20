@@ -1,0 +1,24 @@
+<b>GENERAL ---------------------------------------------------------------------------</b>
+<b>MODE    KEYMAPS     COMMAND</b>
+(N)     shift+x     Open netrw
+(N)     shift+=     Increase vim window
+(N)     shift+-     Decrease vim window
+(V)     shift+j     Move line to below
+(V)     shift+k     Move line to above
+(N)     n           Scroll down and keep cursor in front of word while search text
+(N)     shift+n     Scroll up and keep cursor in front of word while search text
+(N)     hs          Horizontal split
+(N)     vs          Vertical split
+(N)     space+p     Paste text to replace other without losing the first text copied
+(N)     space+space Move focus vim window
+(N)     space+h     Move focus vim windows to left
+(N)     space+j     Move focus vim windows to below
+(N)     space+k     Move focus vim windows to above
+(N)     space+l     Move focus vim windows to right
+(N)     space+t     Replace string exactly
+(N)     space+x     Chmod file
+(N)     space+y     Copy file to system clipboard
+(N)     ctrl+d      Scroll down and set cursor on half of page
+(N)     ctrl+u      Scroll up and set cursor on half of page
+(N)     ctrl+c      Esc
+(N)     ctrl+f      Open new tmux session

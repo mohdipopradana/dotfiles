@@ -1,0 +1,15 @@
+#!/bin/bash
+headset=$(amixer -c 0 contents | awk -F"," '
+$1 == "numid=19" {
+	c=1
+} c && /: values/ {
+	split($0, a, "=") 
+	print a[2];
+	exit
+}')
+
+if [ "$headset" = "on"  ]; then
+	echo " "
+else
+	echo ""
+fi

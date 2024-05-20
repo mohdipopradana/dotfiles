@@ -1,0 +1,16 @@
+configuration{
+    modi: "drun";
+    font: "FiraCode Nerd Font Medium 7";
+    show-icons: true;
+    location: 0;
+    disable-history: true;
+    kb-cancel: "Escape,Ctrl+c,space";
+    display-drun: "Apps";
+    dpi: 150;
+    fix-num-lines: "true";
+    filebrowser {
+    	sorting-method: "name";
+	}
+}
+
+@theme "~/.config/rofi/display/colorschemes/gruvbox.rasi"

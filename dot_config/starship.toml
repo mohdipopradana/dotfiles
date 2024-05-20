@@ -1,0 +1,122 @@
+[character]
+success_symbol = "[➜](bold green)"
+error_symbol = "[➜](bold red)"
+
+[username]
+format = "[$user]($style)"
+
+[hostname]
+format = ":[$hostname]($style) "
+
+# configure directory
+[directory]
+read_only = " "
+truncation_length = 10
+truncate_to_repo = true # truncates directory to root folder if in github repo
+style = "bold italic blue"
+
+# [cmd_duration]
+# min_time = 4
+# show_milliseconds = false
+# disabled = false
+# style = "bold italic red"
+
+[aws]
+symbol = " "
+
+[conda]
+symbol = " "
+
+[docker_context]
+symbol = " "
+format = "via [$symbol$context]($style) "
+style = "blue bold"
+only_with_files = true
+detect_files = ["docker-compose.yml", "docker-compose.yaml", "Dockerfile"]
+detect_folders = []
+disabled = false
+
+[elixir]
+symbol = " "
+
+[git_branch]
+symbol = " "
+
+[git_status]
+format = '([$all_status$ahead_behind]($style)) '
+# conflicted = '\[✘ [$count](bright-white bold)\]'
+# ahead = '\[[⇡](bright-blue)[$count](bright-white bold)\]'
+# behind = '\[[⇣](white)[$count](bright-white bold)\]'
+# diverged = '\[[ ](purple)|[⇡](bright-blue)[$ahead_count](bright-white bold)[⇣](white)[$behind_count](bright-white)\]'
+# untracked = '\[ [$count](bright-white bold)\]'
+# stashed = '\[[📦](bright-yellow)[$count](bright-white bold)\]'
+# modified = '\[[ ](bright-bright-yellow)[$count](bright-white bold)\]'
+# staged = '\[[ ](bright-green)[$count](bright-white bold)\]'
+# renamed = '\[[ ](bright-cyan) [$count](bright-white bold)\]'
+# deleted = '\[ [$count](bright-white bold)\]'
+
+conflicted = '\[[](red)[$count](bright-white bold)\]'
+ahead = '\[[⇡](bright-blue)[$count](bright-white bold)\]'
+behind = '\[[⇣](bright-blue)[$count](bright-white bold)\]'
+diverged = '\[[ ](bright-green)|[⇡](bright-blue)[$ahead_count](bright-white bold)[⇣](bright-blue)[$behind_count](bright-white)\]'
+untracked = '\[[?](bright-bright-yellow)[$count](bright-white bold)\]'
+stashed = '\[[\$](bright-yellow)[$count](bright-white bold)\]'
+modified = '\[[~](bright-yellow)[$count](bright-white bold)\]'
+staged = '\[[✓](bright-yellow)[$count](bright-white bold)\]'
+renamed = '\[[»](bright-yellow) [$count](bright-white bold)\]'
+deleted = '\[[-](bright-yellow)[$count](bright-white bold)\]'
+
+[golang]
+symbol = " "
+
+[java]
+symbol = " "
+
+[julia]
+symbol = " "
+
+[lua]
+symbol = " "
+
+[ocaml]
+symbol = " "
+
+[package]
+symbol = " "
+
+[perl]
+symbol = " "
+
+[php]
+symbol = " "
+
+[python]
+symbol = " "
+#pyenv_version_name = true
+format = 'via [${symbol}(${version} )(\($virtualenv\) )]($style)'
+style = "bold bright-yellow"
+pyenv_prefix = "venv "
+python_binary = ["./venv/bin/python", "python", "python3", "python2"]
+detect_extensions = ["py"]
+version_format = "v${raw}"
+
+[ruby]
+symbol = " "
+
+[rust]
+symbol = " "
+
+[scala]
+symbol = " "
+
+[shlvl]
+symbol = " "
+
+# [swift]
+# symbol = " "
+
+[nodejs]
+symbol = " "
+format = "via [${symbol}$version](bold green) "
+detect_files = ["package.json", ".node-version"]
+detect_folders = ["node_modules"]

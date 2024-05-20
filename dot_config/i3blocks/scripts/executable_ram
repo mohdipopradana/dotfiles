@@ -1,0 +1,16 @@
+#!/bin/bash
+
+ram_usage=$(free -h --giga | awk 'NR==2 {print $3 "/" $2}')
+
+# ram_icon=" "
+# ram_icon=" "
+# ram_icon=" "
+# ram_icon="󰍛 "
+# ram_icon=" "
+# ram_icon=" "
+# ram_icon=" " 
+# ram_icon=" " 
+# ram_icon=" "
+ram_icon="󰒋 "
+
+echo "${ram_icon}${ram_usage}"

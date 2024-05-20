@@ -1,0 +1,22 @@
+<b>AUTOCOMPLETION ---------------------------------------</b>
+<b>MODE    KEYMAPS     COMMAND</b>
+(I)     shift+tab   Select prev. suggestion
+(I)     shift       Select next. suggestion
+(I)     ctrl+space  Completing suggestion
+(I)     enter       Select suggestion
+(I)     ctrl+c      Close
+
+<b>LSP --------------------------------------------------</b>
+<b>MODE    KEYMAPS     COMMAND</b>
+(N)     gd          Jump to definition
+(N)     gD          Jump to declaration
+(N)     gR          Open references
+(N)     ctrl+k      Go to previous diagnostics
+(N)     ctrl+j      Go to next diagnostic
+(N)     space+ll    Open LSP diagnostics location
+(N)     space+ld    Open diagnostic
+(N)     space+lh    Open signature help
+(N)     space+ln    Rename word
+(N)     space+la    Open code action
+(N)     space+lv    Open hover
+(N)     space+ls    Open workspace symbol

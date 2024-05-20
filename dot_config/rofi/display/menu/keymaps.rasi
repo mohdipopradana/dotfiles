@@ -1,0 +1,30 @@
+configuration{
+    font: "FiraCode Nerd Font Medium 7";
+    show-icons: true;
+    location: 0;
+    disable-history: false;
+    hide-scrollbar: false;
+    dpi: 150;
+    fix-num-lines: "true";
+}
+
+@theme "~/.config/rofi/display/colorschemes/gruvbox.rasi"
+
+window {
+    width: 500;
+    height: 300;
+
+}
+
+listview {
+    border: 2px 0  0 0;
+    padding: 5px 3px 0px 3px;
+    spacing: 2px;
+    columns: 1;
+    lines: 2;
+}
+
+element {
+    border: 0;
+    padding: 0px 1px 2px 5px;
+}

@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# cpu_usage=$(mpstat | awk '/all/{print $4}')
+#
+
+
+# # cpu_icon=" "
+#
+# cpu_icon=" "
+#
+# echo "${cpu_icon}${cpu_usage}%"
+
+cpu_perc=$(cat <(grep 'cpu ' /proc/stat) <(sleep 1 && grep 'cpu ' /proc/stat) | awk -v RS="" '{printf "%.0f%\n", ($13-$2+$15-$4)*100/($13-$2+$15-$4+$16-$5)}')
+cpu_temp=$(sensors | grep temp1 | head -1 | awk '{print $2}' | cut -c 2- | cut -f1 -d'.')
+
+
+if [ "${cpu_temp}" -ge 0 ] && [ "${cpu_temp}" -le 65 ]; then
+    echo "<span color='#ffffff'> ${cpu_perc}</span> <span color='#ffffff'> ${cpu_temp}°C</span>"
+elif [ "${cpu_temp}" -gt 65 ] && [ "${cpu_temp}" -le 80 ]; then
+    echo "<span color='#ffffff'> ${cpu_perc}</span> <span color='#ffb000'> ${cpu_temp}°C</span>"
+elif [ "${cpu_temp}" -gt 80 ] && [ "${cpu_temp}" -le 100 ]; then
+    echo "<span color='#ffffff'> ${cpu_perc}</span> <span color='#cc241d'> ${cpu_temp}°C</span>"
+fi

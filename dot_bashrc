@@ -1,0 +1,63 @@
+# Test new dotfile
+# ~/.bashrc
+#
+
+# This is new version add from chezmoi 16:37
+
+# Change editor to neovim
+export EDITOR="/usr/bin/nvim"
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+PS1='[\u@\h \W]\$ '
+
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/mdpradana/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/mdpradana/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/mdpradana/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/mdpradana/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+export PROXY_SERVER="192.168.43.1"
+export PORT=7071
+
+# Set proxy
+function setproxy()  {
+    export {http,https,ftp}_proxy="http://$PROXY_SERVER:$PORT"
+}
+
+# Unset proxy
+function unsetproxy() {
+    unset {http,https,ftp}_proxy
+}
+
+setproxy
+#
+# #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+# export SDKMAN_DIR="$HOME/.sdkman"
+# [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+# opam configuration
+[[ ! -r /home/mdpradana/.opam/opam-init/init.zsh ]] || source /home/mdpradana/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
+
+
+. "$HOME/.cargo/env"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+eval "$(starship init bash)"
+

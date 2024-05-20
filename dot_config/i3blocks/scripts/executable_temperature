@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# get_temp=$(cat /sys/class/thermal/thermal_zone0/temp)
+
+# temp_value=$((get_temp/1000))
+
+
+temp_value=$(sensors -A coretemp-isa-0000 | awk 'NR==2 {print $4}' | cut -c 2- | cut -c -2)
+
+if [ "${temp_value}" -ge 0 ] && [ "${temp_value}" -le 35 ]; then
+    echo "<span color='#ffffff'> ${temp_value}°C</span>"
+elif [ "${temp_value}" -gt 35 ] && [ "${temp_value}" -le 60 ]; then
+    echo "<span color='#fff600'> ${temp_value}°C</span>"
+elif [ "${temp_value}" -gt 60 ] && [ "${temp_value}" -le 80 ]; then
+    echo "<span color='d65d0e'> ${temp_value}°C</span>"
+elif [ "${temp_value}" -gt 80 ] && [ "${temp_value}" -le 100 ]; then
+    echo "<span color='#cc241d'> ${temp_value}°C</span>"
+fi
